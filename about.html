@@ -249,14 +249,31 @@ nav {
         .social-icons a:hover {
             color: #4A4A5D; /* Slightly darker color on hover */
         }
+    /* Buttons */
+  .button {
+    background-color: white;
+    color: #6868EC;
+    padding: 10px 20px;
+    border: 1px solid #6868EC;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline for button-like appearance */
+  }
+
+  .button:hover {
+    background-color: #cfcff0;
+  }
 </style>
 
 <body>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#" style="color: #6868EC;">About</a></li>
-            <li><a href="#">Work</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" style="color: #6868EC;">About</a></li>
+            <li><a href="work.html">Work</a></li>
             <li><a href="#contact">Contact</a></li> 
         </ul>
     </nav>
@@ -275,7 +292,7 @@ nav {
         experiences and leave a lasting impression. With a keen eye for detail, a passion for innovation, 
         and a commitment to excellence, I strive to push the boundaries of design and deliver exceptional 
         results.</p>
-       <input type="button" value="See my work →">
+       <a href="work.html" class="button">See my work →</a>
       </div>
      </div>
      <br>
