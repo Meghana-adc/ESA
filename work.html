@@ -184,28 +184,29 @@ nav {
         }
 
 .cards-container {
-            margin: 5vh;
-            padding: 5vh;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            width: 90vw;
-            color: white;
-        }
+  margin: 5vh;
+  padding: 5vh;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Added for flexible card heights */
+  width: 90vw;
+  color: white;
+  clear: both; /* Added to fix card alignment issue */
+}
 
-
-    .card {
-      width: 350px;
-      height: 525px;
-      border: 1px solid #ccc;
-      color: white;
-      padding: 10px;
-      padding-bottom: 80px;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease-in-out;
-      margin-bottom: 5%;
-    }
+.card {
+  width: 350px;
+  /* Option 1: Set fixed height for consistent alignment
+  height: 525px; */
+  border: 1px solid #ccc;
+  color: white;
+  padding: 10px;
+  padding-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 5%;
+}
 
     .card-image {
       width: 100%;
