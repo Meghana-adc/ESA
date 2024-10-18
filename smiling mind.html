@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smiling Mind</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+        body {
+            margin: 0; 
+            padding: 0; 
+            background-image: radial-gradient(ellipse at center, #CCCCFF, white);
+            background-size: auto; 
+            background-position: top left; 
+            background-repeat: repeat; 
+        }
+
+  hr.section-divider {
+    width: 80%; /* Line width is 80% of the container */
+    border: none; /* Remove default border */
+    border-top: 1px solid #6868EC; /* Line thickness and color */
+    margin: 20px auto; /* Center the line */
+  }
+
+  nav {
+    margin-left: 9.6%; /* Removed padding-left to eliminate space */
+    padding-top: 1%; 
+    padding-bottom: 1%; /* Reduced bottom padding */
+  }
+
+  nav ul {
+    list-style: none;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  nav ul li {
+    font-family: Comfortaa;
+    font-weight: medium;
+    font-size: 24px;
+    margin-right: 2%;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #3C4244;
+    padding-left: 10px;
+  }
+
+  nav ul li.active a {
+    color: #6868EC;
+  }
+
+  nav ul li a:hover {
+    color: #999999;
+  }
+
+  #leftbox {
+    float: left;
+    width: 50%;
+    height: 280px;
+    font-family: Comfortaa;
+    font-weight: light;
+    font-size: 60px;
+    margin-left: 10%;
+    margin-bottom: 10%;
+  }
+
+#rightbox {
+  float: right;
+  width: 40%;
+  height: 280px;
+  font-family: Comfortaa;
+  font-weight: light;
+  font-size: 32px;
+  margin-top: 5%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+
+  /* Styling for Projects text */
+  p#projects-text {
+    font-size: 1.6vw;
+    color: #3C4244;
+    padding-left: 10%;
+    font-family: Comfortaa;
+    font-weight: light;
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 4%; /* Reduced bottom margin to reduce space */
+    padding-right: 10%;
+  }
+
+  /* Styling for City Quest */
+  p#city-quest {
+    font-size: 3.5vw;
+    font-family: Montserrat, sans-serif;
+    color: #62627D;
+    margin-left: 10%;
+    margin-bottom: 5px; /* Reduced bottom margin */
+    margin-top: 5px; /* Reduce the gap between Projects and City Quest */
+  }
+
+  p.subtext {
+    font-size: 2.3vw;
+    font-family: Montserrat, sans-serif;
+    color: #6868EC;
+    margin-left: 10%;
+    margin-bottom: 20px;
+  }
+
+        .slideshow-container {
+            width: 18.75%;  /* Keep it responsive */
+            height: 25%; /* Height of the slideshow */
+            overflow: hidden;
+            position: relative;
+            margin-left: 70%;
+        }
+
+        .slides {
+            display: flex;
+            flex-direction: column; /* Stack slides vertically */
+            height: 300%; /* 3 slides stacked */
+            animation: slideVertical 12s infinite;
+        }
+
+        .mySlides {
+            width: 100%;
+            height: 100%; /* Each slide takes full height */
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Keyframes for vertical scrolling */
+        @keyframes slideVertical {
+            0% { transform: translateY(0); }
+            33.33% { transform: translateY(-100%); } /* Move to the second slide */
+            66.66% { transform: translateY(-200%); } /* Move to the third slide */
+            100% { transform: translateY(0); } /* Loop back to the first slide */
+        }
+
+         /* Input field styles */
+.input-field {
+    width: 100%; /* Full width */
+    height: 66px; /* Set height */
+    background-color: #d2d2f7; /* Background color */
+    border: none; /* No border */
+    padding: 15px; /* Padding inside input */
+    margin-bottom: 20px; /* Space between fields */
+    margin-top: 0;
+    margin-right: 10%;
+    font-size: 16px; /* Font size */
+    font-family: 'Comfortaa', sans-serif; /* Font family */
+    color: #4A4A5D; /* Font color */
+    border-radius: 10px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.textarea-field {
+    width: 100%; /* Full width */
+    height: 224px; /* Height for message textarea */
+    background-color: #d2d2f7; /* Background color */
+    border: none; /* No border */
+    padding: 15px; /* Padding inside textarea */
+    margin-bottom: 20px; /* Space between fields */
+    margin-top: 0;
+    margin-right: 10%;
+    font-size: 16px; /* Font size */
+    font-family: 'Comfortaa', sans-serif; /* Font family */
+    color: #4A4A5D; /* Font color */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Submit button */
+.submit-button {
+    background-color: #6868EC; /* Background color */
+    color: white; /* Text color */
+    padding: 15px 20px; /* Padding */
+    border: none; /* No border */
+    font-size: 16px; /* Font size */
+    font-family: 'Comfortaa', sans-serif; /* Font family */
+    cursor: pointer; /* Pointer cursor */
+    width: 30%; /* Full width */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+/* Submit button hover effect */
+.submit-button:hover {
+    background-color: #4A4A5D; /* Darker color on hover */
+}
+
+#contact{
+  float: left;
+  width: 30%;
+  height: 280px;
+  font-family: Comfortaa;
+  font-weight: light;
+  font-size: 60px;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+
+#right {
+  float: right;
+  width: 40%;
+  height: 280px;
+  font-family: Comfortaa;
+  font-weight: light;
+  font-size: 32px;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+
+ /* Style the icon links */
+ .social-icons a {
+            text-decoration: none;
+            color: #6868EC; /* Custom color */
+            font-size: .5 em; /* Size of the icons */
+            margin-right: 2vw; /* Spacing between the icons */
+            transition: color 0.3s ease;
+            margin-left: 0;
+        }
+
+        /* Hover effect for icons */
+        .social-icons a:hover {
+            color: #4A4A5D; /* Slightly darker color on hover */
+        }
+
+         /* New Textbox Styles */
+    .textbox {
+        width: 40%; /* Adjusted width */
+        height: auto;
+        margin-left: 5%; /* Add space between slideshow and textbox */
+        margin-top: 0%;
+        float: left;
+        font-family: Comfortaa;
+        font-size: 20px;
+        color: #4A4A5D;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #f9f9f9; /* Light background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" style="color: #6868EC;">Work</a></li>
+            <li><a href="#contact">Contact</a></li> 
+        </ul>
+    </nav>
+
+    <p style="font-size: 50px; font-family: Montserrat, sans-serif; color: #62627D; margin-left: 10%; margin-bottom: 10px;">Smiling Mind</p>
+    <p style="font-size: 30px; font-family: Montserrat, sans-serif; color: #6868EC; margin-left: 10%; margin-bottom: 20px;">Interaction Design</p>
+
+    <div id="leftbox">
+      <p style="color: #4D4A4A; font-size: 1.5vw;">The Smiling Mind app is a mindfulness and meditation 
+        platform designed to support users in cultivating mental well-being through guided meditation sessions,
+        mindfulness exercises, and structured programs. By conducting usability tests we assessed the ease of 
+        use and user experience, and identified areas of confusion in navigation and program selection. Based 
+        on our findings we redesigned the app to improve user satisfaction and engagement.</p>
+        <br>
+      <img src="https://raw.githubusercontent.com/Meghana-adc/test/refs/heads/main/e5.jpg" style="width: 100%;">
+      <br>
+      <img src="https://raw.githubusercontent.com/Meghana-adc/test/refs/heads/main/b4.jpg" style="width: 100%;">
+    </div>
+    
+    <div class="slideshow-container">
+        <div class="slides">
+            <div class="mySlides">
+                <img src="https://raw.githubusercontent.com/Meghana-adc/test/refs/heads/main/e4.jpg" alt="Slide 1">
+                <div class="text">Caption One</div>
+            </div>
+            <div class="mySlides">
+                <img src="https://raw.githubusercontent.com/Meghana-adc/test/refs/heads/main/e3.jpg" alt="Slide 2">
+                <div class="text">Caption Two</div>
+            </div>
+            <div class="mySlides">
+                <img src="https://raw.githubusercontent.com/Meghana-adc/test/refs/heads/main/e2.jpg" alt="Slide 3">
+                <div class="text">Caption Three</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Add horizontal line here -->
+    <hr class="section-divider">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+      <div id="contact">
+       <p style="color: #1E1B1B; font-size: 40px; font-family: Comfortaa;">Let's work together </p>
+       <p style="color: #4D4A4A; font-size: 22px; font-family: Comfortaa;">Thank you for showing interest in working together, I would love to hear about your project. Please provide information about your project's scope, timeline, and budget.</p>
+       <!-- Social Media Icons -->
+         <div class="social-icons" style="text-align: left; margin-top: 5vw;">
+    
+      <!-- Behance -->
+      <a href="https://www.behance.net/meghanaarun" target="_blank" aria-label="Behance">
+          <i class="fab fa-behance"></i>
+      </a>
+    
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/meghana-arun-6aa429333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+         <i class="fab fa-linkedin"></i>
+      </a>
+    
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/tale._.trails?igsh=cXN6cWV5ZGV3cTlv" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+      </a>
+         </div>
+      </div>
+    
+      <div id="right" style="margin-top: 10px; margin-bottom: 10%;">
+        <!-- Input Fields and Submit Button -->
+        <form>
+           <!-- Name Field -->
+           <input type="text" name="name" placeholder="Name" class="input-field" required>
+     
+           <!-- Email Field -->
+           <input type="email" name="email" placeholder="Email" class="input-field" required>
+     
+           <!-- Message Field -->
+           <textarea name="message" placeholder="Type your message here" class="textarea-field" required></textarea>
+     
+           <!-- Submit Button -->
+           <input type="submit" value="Submit" class="submit-button">
+        </form>
+       <br>
+    <br>
+    <br>
+    <div>
+    <p style="color: white;"> .</p>
+    </div>
+
+</body>
+</html>
